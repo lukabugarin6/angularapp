@@ -22,16 +22,22 @@ export class HeroDetailComponent implements OnInit {
     this.getHero();
   }
 
+  //get hero by id from heroService
   getHero(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.heroService.getHero(id)
-      .subscribe(hero => this.hero = hero);
+      .subscribe((hero:Hero) => this.hero = hero);
   }
 
+  // Going to previous route with help of location module
   goBack(): void {
     this.location.back();
   }
 
+  /**
+   * After the hero is updated go back to the previous route
+   * @return {void} This is the result
+   */
   save(): void {
     if(this.hero) {
       this.heroService.updateHero(this.hero)

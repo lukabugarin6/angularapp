@@ -7,6 +7,7 @@ import { Hero } from './hero';
   providedIn: 'root'
 })
 export class InMemoryDataService implements InMemoryDbService {
+  // Database simulation
   createDb() {
     const heroes = [
       { id: 11, name: 'Dr Nice' },
@@ -24,7 +25,7 @@ export class InMemoryDataService implements InMemoryDbService {
   }
 
   constructor() { }
-  
+
   // Overrides the genId method to ensure that a hero always has an id.
    // If the heroes array is empty,
    // the method below returns the initial number (11).

@@ -1,11 +1,14 @@
 <h2>Top Heroes</h2>
 <nav>
 </nav>
+<!-- grid for heroes -->
 <div class="heroes-menu">
   <a *ngFor="let hero of heroes" routerLink="/heroes/detail/{{hero.id}}">
     {{hero.name}}
   </a>
 </div>
+<!-- Link to list of all heroes -->
 <a routerLink="/heroes/list">List Of All Heroes</a>
 
+<!-- Search hero list -->
 <app-hero-search></app-hero-search>

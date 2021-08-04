@@ -14,11 +14,14 @@ export class DashboardComponent implements OnInit {
     private heroService: HeroService
   ) { }
 
+  // get heroes on mmount
   ngOnInit(): void {
     this.getHeroes();
   }
 
-
+  /**
+   * Setting heroes array to the count of four heroes only (from second to sixth)
+   */
   getHeroes(): void {
     this.heroService.getHeroes()
       .subscribe(heroes => this.heroes = heroes.slice(1, 5));

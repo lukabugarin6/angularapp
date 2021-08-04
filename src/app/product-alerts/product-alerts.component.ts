@@ -8,7 +8,9 @@ import { Product } from '../products';
   styleUrls: ['./product-alerts.component.scss']
 })
 export class ProductAlertsComponent implements OnInit {
+  // Receiving props from parent
   @Input() product!: Product;
+  // Sending event to parent
   @Output() notify = new EventEmitter();
   constructor() {}
 

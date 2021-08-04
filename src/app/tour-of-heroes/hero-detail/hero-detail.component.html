@@ -1,7 +1,9 @@
 <div *ngIf="hero">
+  <!-- Example of uppercase pipe -->
   <h2>{{hero.name | uppercase}} Details</h2>
   <div><span>id: </span>{{hero.id}}</div>
   <div>
+    <!-- Input for editing heros name -->
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
   </div>
