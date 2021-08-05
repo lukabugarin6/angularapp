@@ -2,15 +2,14 @@ import { Product } from './products';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
-
 interface ShippingPrice {
   type: string;
   price: number;
 }
 
+@Injectable({
+  providedIn: 'root'
+})
 export class CartService {
   items: Product[] = [];
 
